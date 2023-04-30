@@ -14,6 +14,7 @@ console.log(epicPhrase2);
 
 let lorem = 'Esto es un string \n ' + 'esto es otra linea';
 
+
 // asi se hace ahora a partir de ES6.
 
 let lorem2 = `Esta es una frase epica
