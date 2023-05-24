@@ -159,3 +159,64 @@ const suma = (num1, num2) => (
 )
 ```
 
+# Plantillas literales y Strings
+
+Las *template literals* son una forma de crear cadenas de caracteres que pueden contener variables sin necesidad de utilizar la concatenación. Esto mejora la legibilidad y la mantenibilidad del código.
+
+### Concatenación de cadenas de caracteres:
+
+Antes de ES6, si deseabas crear una cadena larga o un mensaje elaborado, tenías que utilizar la concatenación de cadenas. 
+
+> *La concatenación de cadenas consiste en unir uno o más caracteres, como si fuera una suma*.
+
+```js
+var nombre = "Andres";
+var edad = 23;
+var mensaje = "Mi nombre es " + nombre + " y tengo " + edad + " años.";
+
+console.log(mensaje);
+// 'Mi nombre es Andres y tengo 23 años.'var nombre = "Andres";
+var edad = 23;
+var mensaje = "Mi nombre es " + nombre + " y tengo " + edad + " años.";
+
+console.log(mensaje);
+// 'Mi nombre es Andres y tengo 23 años.'
+```
+
+Esto genera varios problemas en la legibilidad y la mantenibilidad del código. Se vuelve más complejo en mensajes más extensos o al tener que preocuparse por agregar espacios antes o después de cada variable concatenada.
+
+### Uso de *template literals*.
+
+Con la introducción de las plantillas literales en ES6, se utiliza el carácter de acento grave ( ` ), que no debe confundirse con la comilla simple ( ' ), para envolver el mensaje. Para incluir las variables, se utiliza la sintaxis ${variable}.
+
+```js
+var nombre = "Andres";
+var edad = 23;
+
+var mensaje = `Mi nombre es ${nombre} y tengo ${edad} años.`;
+
+console.log(mensaje);
+// 'Mi nombre es Andres y tengo 23 años.'
+```
+De esta manera, el código es más legible y fácil de mantener.
+
+*template literals* con múltiples líneas:
+Las plantillas literales también permiten crear mensajes que contengan varias líneas separadas entre sí. Antes de ES6, la forma de crear una plantilla con múltiples líneas era agregar el carácter de escape **\n** al string.
+
+```js
+var mensaje = "Línea 1 \n" + "línea 2";
+
+console.log(mensaje);
+// 'Línea 1
+// línea 2'
+
+//Con ES6, solo necesitas utilizar las plantillas literales sin necesidad de caracteres de escape.
+
+const mensaje = `Línea 1
+línea 2`;
+
+console.log(mensaje);
+// 'Línea 1
+// línea 2'
+
+```
