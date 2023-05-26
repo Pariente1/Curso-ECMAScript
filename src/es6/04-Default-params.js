@@ -9,7 +9,7 @@ function newUser(name, age, country){
 newUser();
 newUser('David', 15, 'CO');
 
-//Ahora, despues de ES7 se hace de esta. 
+//Ahora, despues de ES6 se hace de esta manera. 
 
 function newAdmin(name='Oscar', age = 32, country = 'CL'){
     console.log(name, age, country);
